@@ -21,3 +21,18 @@ h2, h3, h4 {
   margin: 20px 0;
   color: var(--color-light);
 }
+
+.jeu-conteneur {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.infos-jeu {
+  flex: 1; /* Permet à ce bloc d'occuper de l'espace disponible */
+  padding: 20px; /* Ajoute un peu d'espacement autour du texte */
+  max-width: 400px; /* Limite la largeur du bloc d'informations */
+}
+
+

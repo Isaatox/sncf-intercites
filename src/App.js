@@ -175,7 +175,7 @@ function App() {
     const villesMelangees = shuffleArray([...villesInitiales]);
     setVillesRestantes(villesMelangees);
 
-    choisirVilleAleatoire(villesMelangees); 
+    choisirVilleAleatoire(villesMelangees);
 
     setVillesRepondues([]);
     setJeuCommence(true);
@@ -184,7 +184,6 @@ function App() {
   const choisirVilleAleatoire = (villes) => {
     if (villes.length > 0) {
       const indexAleatoire = Math.floor(Math.random() * villes.length);
-      console.log(indexAleatoire, villes[indexAleatoire].nom)
       setVilleActuelle(villes[indexAleatoire].nom);
     } else {
       alert(`Fin du jeu! Votre score : ${score}`);
@@ -194,7 +193,7 @@ function App() {
 
   const handleCorrectAnswer = () => {
     setScore(score + 1);
-    setVillesRepondues(prev => [...prev, "correct"]); 
+    setVillesRepondues(prev => [...prev, "correct"]);
     choisirVilleSuivante();
   };
 
@@ -207,7 +206,7 @@ function App() {
     const nouvellesVilles = villesRestantes.filter(ville => ville.nom !== villeActuelle);
     setVillesRestantes(nouvellesVilles);
 
-    choisirVilleAleatoire(nouvellesVilles); 
+    choisirVilleAleatoire(nouvellesVilles);
   };
 
   return (
@@ -215,20 +214,22 @@ function App() {
       {!jeuCommence ? (
         <StartGame onStart={handleStart} />
       ) : (
-        <>
-          <h2>Joueur: {pseudo}</h2>
-          <IndicateursProgression
-            total={villesInitiales.length}
-            reponses={villesRepondues}
-          />
-          <h3>Trouvez: {villeActuelle}</h3>
-          <h4>Score: {score}</h4>
+        <div className="jeu-conteneur"> {/* Ajoutez cette classe */}
+          <div className="infos-jeu"> {/* Ajoutez cette classe */}
+            <h2>Joueur: {pseudo}</h2>
+            <IndicateursProgression
+              total={villesInitiales.length}
+              reponses={villesRepondues}
+            />
+            <h3>Trouvez: {villeActuelle}</h3>
+            <h4>Score: {score}</h4>
+          </div>
           <Carte
             villeActuelle={villeActuelle}
             onCorrectAnswer={handleCorrectAnswer}
             onWrongAnswer={handleWrongAnswer}
           />
-        </>
+        </div>
       )}
     </div>
   );

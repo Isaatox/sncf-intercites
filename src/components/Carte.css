@@ -1,32 +1,33 @@
 .carte-container {
-    position: relative;
-    width: 100%; 
-    max-width: 1000px;
-  }
-  
-  .carte-image {
-    width: 100%;
-    height: auto;
-    display: block; 
-  }
-  
-  .ville-point {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 9999px;
-    background-color: grey; 
-    border: none;
-    cursor: pointer;
-    transform: translate(-50%, -50%); 
-  }
-  
-  .ville-point.trouve {
-    background-color: green;
-    cursor: not-allowed;
-  }
-  
-  .ville-point.non-trouve {
-    background-color: red;
-    cursor: not-allowed;
-  }
+  position: relative;
+  width: 100%; 
+  max-width: 1000px;
+  flex: 1;
+}
+
+.carte-image {
+  width: 100%;
+  height: auto;
+  display: block; 
+}
+
+.ville-point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: grey; 
+  border: none;
+  cursor: pointer;
+  transform: translate(-50%, -50%); 
+}
+
+.ville-point.trouve {
+  background-color: green;
+  cursor: not-allowed;
+}
+
+.ville-point.non-trouve {
+  background-color: red;
+  cursor: not-allowed;
+}
