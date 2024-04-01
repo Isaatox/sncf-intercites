@@ -1,0 +1,39 @@
+.start-game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .start-game-input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--color-dark);
+    width: 80%;
+    max-width: 300px; 
+    box-shadow: var(--shadow);
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .start-game-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+  }
+  
+  .start-game-button {
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--color-primary);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .start-game-button:hover {
+    background-color: darken(var(--color-primary), 10%);
+}
+  

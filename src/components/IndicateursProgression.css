@@ -1,0 +1,30 @@
+.indicateurs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.indicateur {
+  width: 15px; 
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid var(--color-dark);
+  margin: 5px;
+  transition: background-color 0.3s ease-in-out; 
+}
+
+.blanc {
+  background-color: var(--color-light);
+}
+
+.vert {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.rouge {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+}
